@@ -16,6 +16,8 @@ using Microsoft.Win32;
 using System.IO;
 using System.Net;
 using System.Net.Http;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace OCRwpf
 {
@@ -24,20 +26,19 @@ namespace OCRwpf
     /// </summary>
     public partial class MainWindow : Window
     {
+        OpenFileDialog odlg { get; set; }
+        Image img { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        OpenFileDialog odlg;
-        Image img;
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             odlg = new OpenFileDialog();
             odlg.Filter = "Image Files(*.jpg; *.jpeg; *.png)|*jpg; *jpeg; *.png";
-
-            img = new Image();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -45,6 +46,8 @@ namespace OCRwpf
             if((bool)odlg.ShowDialog())
             {
                 Uri fileURI = new Uri(odlg.FileName);
+
+                img = new Image();
                 img.Source = new BitmapImage(fileURI);
 
                 file_img.Source = img.Source;
@@ -53,11 +56,20 @@ namespace OCRwpf
 
         private async void ocr_btn_Click(object sender, RoutedEventArgs e)
         {
-            OCRimg ocr = new OCRimg();
+            if (string.IsNullOrEmpty(odlg.FileName))
+                return;
 
-            var s = await ocr.MakeOCRreq();
+            var s = await OCRreq.MakeOCRreq(odlg);
+            if (s == "0")
+                return;
 
-            imgtext_tblk.Text = s;
+            OCRresult content = JsonSerializer.Deserialize<OCRresult>(s);
+
+            foreach(OCRresult.Parsedresult parse in content.ParsedResults)
+            {
+                imgtext_tblk.Text += parse.ParsedText;
+            }
+            testtbx.Text = s;
         }
     }
 }
