@@ -1,0 +1,15 @@
+C:\Users\vkqwn\Documents\code\OCRwpf\OCRwpf\bin\Debug\OCRwpf.exe.config
+C:\Users\vkqwn\Documents\code\OCRwpf\OCRwpf\bin\Debug\OCRwpf.exe
+C:\Users\vkqwn\Documents\code\OCRwpf\OCRwpf\bin\Debug\OCRwpf.pdb
+C:\Users\vkqwn\Documents\code\OCRwpf\OCRwpf\obj\Debug\OCRwpf.csprojAssemblyReference.cache
+C:\Users\vkqwn\Documents\code\OCRwpf\OCRwpf\obj\Debug\MainWindow.g.cs
+C:\Users\vkqwn\Documents\code\OCRwpf\OCRwpf\obj\Debug\App.g.cs
+C:\Users\vkqwn\Documents\code\OCRwpf\OCRwpf\obj\Debug\OCRwpf_MarkupCompile.cache
+C:\Users\vkqwn\Documents\code\OCRwpf\OCRwpf\obj\Debug\OCRwpf_MarkupCompile.lref
+C:\Users\vkqwn\Documents\code\OCRwpf\OCRwpf\obj\Debug\MainWindow.baml
+C:\Users\vkqwn\Documents\code\OCRwpf\OCRwpf\obj\Debug\OCRwpf.g.resources
+C:\Users\vkqwn\Documents\code\OCRwpf\OCRwpf\obj\Debug\OCRwpf.Properties.Resources.resources
+C:\Users\vkqwn\Documents\code\OCRwpf\OCRwpf\obj\Debug\OCRwpf.csproj.GenerateResource.cache
+C:\Users\vkqwn\Documents\code\OCRwpf\OCRwpf\obj\Debug\OCRwpf.csproj.CoreCompileInputs.cache
+C:\Users\vkqwn\Documents\code\OCRwpf\OCRwpf\obj\Debug\OCRwpf.exe
+C:\Users\vkqwn\Documents\code\OCRwpf\OCRwpf\obj\Debug\OCRwpf.pdb
