@@ -69,7 +69,6 @@ namespace OCRwpf
             {
                 imgtext_tblk.Text += parse.ParsedText;
             }
-            testtbx.Text = s;
         }
     }
 }
