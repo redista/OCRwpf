@@ -7,14 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid x:Name="browse_btn">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
         <TextBox x:Name="file_tbx" HorizontalAlignment="Left" Height="23" Margin="72,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Content="Browse" HorizontalAlignment="Left" Margin="215,32,0,0" VerticalAlignment="Top" Width="77" Height="23" Click="Button_Click"/>
-        <Image x:Name="file_img" HorizontalAlignment="Left" Height="225" VerticalAlignment="Top" Width="242" Margin="72,116,0,0"/>
         <Label Content="Image" HorizontalAlignment="Left" Margin="72,72,0,0" VerticalAlignment="Top"/>
         <Button x:Name="ocr_btn" Content="OCR" HorizontalAlignment="Left" Margin="321,72,0,0" VerticalAlignment="Top" Width="75" Click="ocr_btn_Click"/>
-        <TextBlock x:Name="imgtext_tblk" HorizontalAlignment="Left" Margin="420,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="225" Width="220"/>
+        <Image x:Name="file_img" HorizontalAlignment="Left" Height="272" VerticalAlignment="Top" Width="324" Margin="36,138,0,-135.6"/>
+        <TextBlock x:Name="imgtext_tblk" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="272" Width="324" RenderTransformOrigin="1.017,0.548" Margin="376,138,0,-137.2"/>
         <Label Content="Text" HorizontalAlignment="Left" Margin="420,72,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="testtbx" HorizontalAlignment="Left" Height="23" Margin="295,176,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="testtbx" HorizontalAlignment="Left" Height="23" Margin="478,75,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

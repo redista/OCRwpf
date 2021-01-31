@@ -9,7 +9,7 @@ using System.IO;
 
 namespace OCRwpf
 {
-    public class OCRreq
+    public static class OCRreq
     {
         private static HttpClient req = new HttpClient();
         private static string APIendpoint = "https://api.ocr.space/parse/image";
@@ -31,8 +31,8 @@ namespace OCRwpf
 
                 HttpResponseMessage res = await req.PostAsync(APIendpoint, form);
 
-                var s = await res.Content.ReadAsStringAsync();
-                return s;
+                var str = await res.Content.ReadAsStringAsync();
+                return str;
             }
             catch(Exception e)
             {
